@@ -27,21 +27,6 @@
     a:hover { text-decoration: underline; }
     .wrap { max-width: 880px; margin: 0 auto; padding: 72px 24px 48px; }
 
-    html { scroll-behavior: smooth; }
-    section { scroll-margin-top: 64px; }
-    .topnav {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(227,230,233,.92); backdrop-filter: blur(6px);
-      border-bottom: 1px solid var(--line);
-    }
-    .topnav-inner {
-      max-width: 880px; margin: 0 auto; padding: 14px 24px;
-      display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 6px 26px;
-    }
-    .topnav a { color: var(--text); font-size: .92rem; }
-    .topnav a:first-child { font-weight: 500; }
-    .wrap { padding-top: 48px !important; }
-
     /* Header: photo left, name right */
     header { display: flex; align-items: center; gap: 48px; }
     .photo {
@@ -99,21 +84,10 @@
       .photo { width: 170px; height: 170px; }
       h1 { font-size: 2rem; }
       .links { justify-content: center; }
-      .topnav-inner { justify-content: center; padding: 10px 16px; gap: 4px 16px; }
-      .wrap { padding-top: 28px !important; }
     }
   </style>
 </head>
 <body>
-  <nav class="topnav">
-    <div class="topnav-inner">
-      <a href="cv_margarita_kudaeva.pdf">CV</a>
-      <a href="#about" target="_self">About</a>
-      <a href="#publications" target="_self">Publications</a>
-      <a href="#wip" target="_self">Work in Progress</a>
-      <a href="#research" target="_self">Research Experience</a>
-    </div>
-  </nav>
   <div class="wrap">
     <header>
       <!-- Put your photo in this folder as photo.jpg -->
