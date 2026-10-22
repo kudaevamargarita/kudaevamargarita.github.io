@@ -10,11 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #e6e6e6;
-      --text: #1f1f1f;
-      --muted: #5a5a5a;
-      --line: #c9c9c9;
-      --link: #1f3f6e;
+      --bg: #ede6da;
+      --text: #2a251f;
+      --muted: #6b6155;
+      --line: #d6cbb9;
+      --link: #7a3426;
     }
     * { box-sizing: border-box; }
     body {
@@ -31,7 +31,7 @@
     section { scroll-margin-top: 64px; }
     .topnav {
       position: sticky; top: 0; z-index: 10;
-      background: rgba(230,230,230,.92); backdrop-filter: blur(6px);
+      background: rgba(237,230,218,.92); backdrop-filter: blur(6px);
       border-bottom: 1px solid var(--line);
     }
     .topnav-inner {
@@ -47,7 +47,7 @@
     .photo {
       width: 220px; height: 220px; flex-shrink: 0;
       border-radius: 0; object-fit: cover;
-      background: #cfcfcf;
+      background: #ddd3c3;
       box-shadow: 0 1px 3px rgba(0,0,0,.15);
     }
     h1 {
@@ -76,9 +76,9 @@
     .paper-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 8px; }
     .chip {
       display: inline-block; padding: 2px 14px; font-size: .85rem;
-      border: 1px solid #b5b5b5; border-radius: 999px; color: var(--text); background: #efefef;
+      border: 1px solid #c4b8a4; border-radius: 999px; color: var(--text); background: #f4efe6;
     }
-    .chip:hover { background: #fff; text-decoration: none; }
+    .chip:hover { background: #fbf8f2; text-decoration: none; }
     details.abstract { width: 100%; }
     details.abstract summary { list-style: none; display: flex; align-items: center; gap: 14px; cursor: pointer; }
     details.abstract summary::-webkit-details-marker { display: none; }
@@ -88,7 +88,7 @@
     details.abstract[open] .toggle::before { content: "\2013\00a0\00a0"; }
     .abstract-body {
       margin-top: 10px; padding-left: 16px; border-left: 2px solid var(--line);
-      font-size: .95rem; color: #333;
+      font-size: .95rem; color: #3a332b;
     }
     .entry .paper-meta + .paper-meta { margin-top: 0; }
     footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
