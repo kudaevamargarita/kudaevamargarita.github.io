@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base target="_blank">
+  <title>Margarita Kudaeva</title>
+  <meta name="description" content="Margarita Kudaeva, Research Professional at the Normal Lab, University of Chicago.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #e6e6e6;
+      --text: #1f1f1f;
+      --muted: #5a5a5a;
+      --line: #c9c9c9;
+      --link: #1f3f6e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 "Inter", system-ui, sans-serif;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 72px 24px 48px; }
+
+    html { scroll-behavior: smooth; }
+    section { scroll-margin-top: 64px; }
+    .topnav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(230,230,230,.92); backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topnav-inner {
+      max-width: 880px; margin: 0 auto; padding: 14px 24px;
+      display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 6px 26px;
+    }
+    .topnav a { color: var(--text); font-size: .92rem; }
+    .topnav a:first-child { font-weight: 500; }
+    .wrap { padding-top: 48px !important; }
+
+    /* Header: photo left, name right */
+    header { display: flex; align-items: center; gap: 48px; }
+    .photo {
+      width: 220px; height: 220px; flex-shrink: 0;
+      border-radius: 0; object-fit: cover;
+      background: #cfcfcf;
+      box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600; font-size: 2.6rem; line-height: 1.15;
+      margin: 0 0 6px;
+    }
+    .role { font-size: 1.1rem; color: var(--muted); margin: 0 0 20px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px 20px; padding: 0; margin: 0; list-style: none; }
+    .links a { display: inline-flex; align-items: center; gap: 7px; font-size: .95rem; color: var(--text); }
+    .links svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* Sections */
+    section { margin-top: 56px; }
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600; font-size: 1.35rem;
+      margin: 0 0 14px; padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+    a.person { color: inherit; }
+    a.person:hover { text-decoration: underline; }
+    .paper { margin-bottom: 26px; }
+    .paper-title { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.08rem; }
+    .paper-meta { color: var(--muted); font-size: .93rem; }
+    .paper-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 8px; }
+    .chip {
+      display: inline-block; padding: 2px 14px; font-size: .85rem;
+      border: 1px solid #b5b5b5; border-radius: 999px; color: var(--text); background: #efefef;
+    }
+    .chip:hover { background: #fff; text-decoration: none; }
+    details.abstract { width: 100%; }
+    details.abstract summary { list-style: none; display: flex; align-items: center; gap: 14px; cursor: pointer; }
+    details.abstract summary::-webkit-details-marker { display: none; }
+    .toggle { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .toggle:hover { color: var(--text); }
+    .toggle::before { content: "+\00a0\00a0"; }
+    details.abstract[open] .toggle::before { content: "\2013\00a0\00a0"; }
+    .abstract-body {
+      margin-top: 10px; padding-left: 16px; border-left: 2px solid var(--line);
+      font-size: .95rem; color: #333;
+    }
+    .entry .paper-meta + .paper-meta { margin-top: 0; }
+    footer { margin-top: 64px; font-size: .85rem; color: var(--muted); }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 40px 16px; }
+      header { flex-direction: column; text-align: center; gap: 24px; }
+      .photo { width: 170px; height: 170px; }
+      h1 { font-size: 2rem; }
+      .links { justify-content: center; }
+      .topnav-inner { justify-content: center; padding: 10px 16px; gap: 4px 16px; }
+      .wrap { padding-top: 28px !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a href="cv.pdf">CV</a>
+      <a href="#about" target="_self">About</a>
+      <a href="#publications" target="_self">Publications</a>
+      <a href="#wip" target="_self">Work in Progress</a>
+      <a href="#experience" target="_self">Experience</a>
+    </div>
+  </nav>
+  <div class="wrap">
+    <header>
+      <!-- Put your photo in this folder as photo.jpg -->
+      <img class="photo" src="photo.jpg" alt="Photo of Margarita Kudaeva"
+           onerror="this.removeAttribute('src'); this.alt=''">
+      <div>
+        <h1>Margarita Kudaeva</h1>
+        <p class="role">Research Professional at <a href="https://www.thenormallab.com">the Normal Lab</a><br>University of Chicago</p>
+        <ul class="links">
+          <li><a href="mailto:kudaeva@uchicago.edu">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg>Email</a></li>
+          <li><a href="https://www.linkedin.com/in/margarita-kudaeva-0b6172284/">
+            <svg viewBox="0 0 24 24"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2ZM8 19H5V9.5h3V19ZM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5ZM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.7 13 12.7 14.3V19h-3V9.5h2.8v1.3c.4-.8 1.4-1.5 2.9-1.5 3 0 3.6 2 3.6 4.6V19Z"/></svg>LinkedIn</a></li>
+        <li><a href="https://scholar.google.com/citations?user=i5FWOq0AAAAJ&amp;hl=en">
+            <svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm-6.8 9.2V16c0 1.9 3 3.5 6.8 3.5s6.8-1.6 6.8-3.5v-3.8L12 16l-6.8-3.8Z"/></svg>Google Scholar</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I am a Research Professional at <a href="https://www.thenormallab.com">the Normal Lab</a> at the University of Chicago, working with
+        <a class="person" href="https://home.uchicago.edu/bursztyn/">Leonardo Bursztyn</a> and <a class="person" href="https://www.aleximas.com">Alex Imas</a>.
+        I received my BA in Economics, summa cum laude, from the joint program of the
+        New Economic School and the Higher School of Economics in Moscow (2026).</p>
+      <p>My research interests are in political economy, law and economics, and social media.</p>
+      <p>My full CV can be found <a href="cv.pdf">here</a>.</p>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="paper">
+        <div class="paper-title">Contract Enforcement in a Stateless Economy</div>
+        <div class="paper-meta">with <a class="person" href="https://sites.google.com/view/sultan-mehmood/home">Sultan Mehmood</a>, <a class="person" href="https://users.nber.org/~dlchen/">Daniel L. Chen</a>, Sajwaar Khalid, Georgii Marinichev</div>
+        <div class="paper-meta"><em>Journal of Development Economics</em>, 2026, 182, 103802</div>
+        <div class="paper-links">
+          <details class="abstract"><summary><a class="chip" href="https://www.sciencedirect.com/science/article/pii/S0304387826000854" target="_blank" rel="noopener">Journal ↗</a><span class="toggle">Abstract</span></summary>
+            <div class="abstract-body"><p>How are contracts enforced when the state cannot compel compliance? We study contract enforcement in a large illegal gambling market where legal recourse is unavailable and participation is largely anonymous. We observe more than 70 percent of gamblers repay their debts, indicating substantial baseline enforcement even in the absence of formal courts. We interpret this descriptive pattern as consistent with a broader set of informal enforcement forces, including repeated interaction, credit constraints, and reputational considerations. We then provide experimental evidence on one specific channel by experimentally varying reputational stakes and the time available to repay. Increasing reputational sanctions and extending the payment deadline raises repayment by a modest but significant amount, from roughly 70 percent to about 77 percent. These effects imply that reputational incentives can strengthen cooperation to a meaningful degree. Overall, our evidence suggests that impersonal markets can sustain substantial repayment without state enforcement, and that reputational sanctions further increase compliance.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="wip">
+      <h2>Work in Progress</h2>
+      <div class="paper">
+        <div class="paper-title">Internet and Crime: Evidence from Broadband Expansion and Social Media Disruptions in China and Russia</div>
+        <div class="paper-meta">Undergraduate thesis, supervised by <a class="person" href="https://sites.google.com/site/rubenenikolopov/home">Ruben Enikolopov</a></div>
+        <div class="paper-links">
+          <details class="abstract"><summary><span class="toggle">Abstract</span></summary>
+            <div class="abstract-body"><p>Broadband internet expansion may generate unintended social externalities alongside its economic benefits. This paper studies the causal effect of broadband expansion on crime using the staggered rollout of the Broadband China Policy (BCP). Using criminal judgment data in a difference-in-differences framework, I show that broadband expansion significantly increased recorded fraud, financial offenses, traffic accident-related and gambling crime. The evidence is consistent with multiple mechanisms, including lower coordination costs, behavioral responses linked to risky activity, and improved monitoring and detection capacity. To further examine mechanisms, I complement the Chinese setting with short-run social-media disruptions in Russia and find no detectable short-run effects on bodily harm, theft, or fraud. This contrast suggests that the Chinese results are more consistent with gradual adjustment associated with sustained digital expansion than with contemporaneous social-media access alone.</p></div>
+          </details>
+        </div>
+      </div>
+      <div class="paper">
+        <div class="paper-title">What&rsquo;s Special about Special Elections?</div>
+        <div class="paper-meta">with Georgii Marinichev, <a class="person" href="https://www.andrei-smirnov.com">Andrei Smirnov</a></div>
+        <div class="paper-links">
+          <details class="abstract"><summary><span class="toggle">Abstract</span></summary>
+            <div class="abstract-body"><p>This paper examines the causal impact of entry through special elections on the behavior and productivity of members of the U.S. House of Representatives. Drawing on a newly assembled panel covering all members of the U.S. House of Representatives from the 112th&ndash;118th Congresses, and an instrumental-variables strategy that leverages deaths in office as a plausibly exogenous shock, we document persistent differences in both the types of representatives selected off-cycle and their subsequent legislative performance. Compared with their regularly elected counterparts from the same districts and Congresses, entrants elected mid-cycle participate more consistently in roll-call votes and exhibit stronger party-line discipline. They are modestly less moderate on conventional ideological scales, introduce legislation at similar rates, but are less likely to see their proposals enacted into law. The evidence supports a turnout-composition mechanism: when electorates are smaller and more ideologically engaged, selection tilts toward candidates with sharper partisan identities, enhancing institutional cohesion and reliability within party caucuses while limiting cross-party legislative success. Overall, our findings demonstrate that an elected official&rsquo;s path to office exerts a systematic influence on both representational style and legislative productivity.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="paper">
+        <div class="paper-title">Research Professional, <a href="https://www.thenormallab.com">The Normal Lab</a>, University of Chicago</div>
+        <div class="paper-meta">with <a class="person" href="https://home.uchicago.edu/bursztyn/">Leonardo Bursztyn</a> and <a class="person" href="https://www.aleximas.com">Alex Imas</a> · 2026&ndash;present</div>
+      </div>
+      <div class="paper">
+        <div class="paper-title">Research Assistant to <a class="person" href="https://sites.google.com/view/sultan-mehmood/home">Sultan Mehmood</a>, New Economic School</div>
+        <div class="paper-meta">2024&ndash;2026</div>
+      </div>
+      <div class="paper">
+        <div class="paper-title">Teaching Assistant, Skolkovo Business School</div>
+        <div class="paper-meta">Philosophy of Science · 2026</div>
+      </div>
+      <div class="paper">
+        <div class="paper-title">Teaching Assistant, HSE &amp; NES</div>
+        <div class="paper-meta">Introduction to Finance, Microeconomics I, Microeconomics II · 2023&ndash;2026</div>
+      </div>
+    </section>
+
+    <footer>Last updated October 2026</footer>
+  </div>
+</body>
+</html>
